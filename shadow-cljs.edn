@@ -1,0 +1,17 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/dev"
+  "src/main"
+  "src/test"]
+
+ :dependencies
+ []
+
+
+ :dev-http {9090 "public/"}
+ :builds
+ {:app {:output-dir "public/compiledjs/"
+        :asset-path "compiledjs"
+        :target :browser
+        :modules {:main {:init-fn markdownify.main/main!}}
+        :devtools {:after-load markdownify.main/reload!}}}}
