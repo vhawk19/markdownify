@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "shadow-cljs release --verbose app"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "shadow-cljs": "^2.8.93"
+  },
+  "dependencies": {
+    "react": "16.13.0",
+    "react-dom": "16.13.0",
+    "showdown": "^1.9.1"
   }
 }
